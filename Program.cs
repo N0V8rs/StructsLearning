@@ -18,6 +18,11 @@ namespace StructsLearning
             public float z; // Public Position for Z
             //...
             //...
+
+            public float Lenght()
+            {
+                return (float)Math.Sqrt(x*x*y*y*z*z);
+            }
         }
 
         struct Vector4
@@ -39,10 +44,13 @@ namespace StructsLearning
         static void Main(string[] args)
         {
             Vector3 position;
-            position.x = 0.0f;
-            position.y = 0.0f;
-            position.z = 0.0f;
+            position.x = 10.0f;
+            position.y = 20.0f;
+            position.z = 30.0f;
             Console.WriteLine("Structs, what it is how to use it");
+            Console.WriteLine();
+            Console.WriteLine("Vector3 Position, see the struct at the top");
+            Console.WriteLine(position.Lenght());
             Console.WriteLine();
 
 
